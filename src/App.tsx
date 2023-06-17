@@ -17,7 +17,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route path='/' element={<FirstPage />}></Route>
+              <Route path='/' element={<FirstPage />} index></Route>
               <Route path='/createPage' element={<CreatePage />}></Route>
               <Route path='/advantagePage' element={<AdvantagePage />}></Route>
               <Route path='/aboutPage' element={<AboutPage />}></Route>
