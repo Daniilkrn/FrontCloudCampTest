@@ -337,6 +337,121 @@
         margin: 0px 30px!important;
         max-width: 95% !important;
     }
+    .modalConfirm_wrapper.active {
+        font-family: 'SB Sans Interface';
+        transition: 1s all;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 20px;
+        }
+        .modalConfirm {
+            transition: 1s all;
+            transform: scale(1);
+            min-width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 1em;
+            .info {
+                padding: 20px;
+                li {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+            .icon_container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 50px 0px 60px 0px;
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100px;
+                    animation: shadow linear 0.25s forwards;
+                    -webkit-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+                    -moz-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+                    box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+                }
+                @keyframes shadow {
+                    0%{
+                        -webkit-box-shadow: 0px 0px 0px 4px rgba(5, 174, 113, 0.15);
+                        -moz-box-shadow: 0px 0px 0px 4px rgba(5, 174, 113, 0.15);
+                        box-shadow: 0px 0px 0px 4px rgba(5, 174, 113, 0.15);
+                    }
+                    100%{
+                        -webkit-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+                        -moz-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+                        box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+                    }
+                }
+                .icon.error{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100px;
+                    animation: shadowError linear 0.25s forwards;
+                    -webkit-box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
+                    -moz-box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
+                    box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
+                }
+                @keyframes shadowError {
+                    0%{
+                        -webkit-box-shadow: 0px 0px 0px 4px rgba(232, 78, 88, 0.15);
+                        -moz-box-shadow: 0px 0px 0px 4px rgba(232, 78, 88, 0.15);
+                        box-shadow: 0px 0px 0px 4px rgba(232, 78, 88, 0.15);
+                    }
+                    100%{
+                        -webkit-box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
+                        -moz-box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
+                        box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
+                    }
+                }
+            }
+            .title {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .title.confirm{
+                justify-content: center;
+            }
+            .title.error{
+                justify-content: flex-start;
+            }
+            .btn_container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+    
+                button {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #FFFFFF;
+                    background: #5558FA;
+                    border-radius: 4px;
+                    padding: 12px 16px;
+    
+                }
+            }
+            .btn_container.error{
+                justify-content: flex-end;
+            }
+        }
+    }
 }
 
 @media screen  and (max-width: 417px){
@@ -606,5 +721,29 @@
         margin-top: 8px;
         padding: 8px;
         max-width: 300px;
+    }
+     .modalConfirm_wrapper.active {
+        font-family: 'SB Sans Interface';
+        transition: 1s all;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 20px;
+        }
+        .modalConfirm {
+            transition: 1s all;
+            transform: scale(1);
+            min-width: 200px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 1em;
+        }
     }
 }

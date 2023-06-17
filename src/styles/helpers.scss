@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'SB Sans Interface';
+    src: url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.eot");
+    src: url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.svg#SB Sans Interface") format("svg"); 
+    font-weight: 600;
+    font-style: normal;
+}
+
 .close_container {
     padding: 4px;
     margin-right: 20px;
@@ -200,6 +212,9 @@
             }
         }
         .title {
+            font-family: 'SB Sans Interface';
+            color: #333333;
+            font-weight: 900;
             width: 100%;
             display: flex;
             justify-content: center;

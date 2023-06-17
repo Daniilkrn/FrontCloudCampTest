@@ -34,10 +34,9 @@ const AboutPage = () => {
 
     const onSubmit: SubmitHandler<IShippingField> = async data => {
         dispatch(setAllDataStage([data.area]))
-        
         setModal(true)
         try {
-            await axios.post("https://api.sbercloud.ru/content/v1/bootcamp/frontend", {
+            await axios.post("https://api.sbercloud.ru/content/v1/bootcamp/fronten", {
                 body: dataAll
             })
                 .then(response => {
@@ -123,7 +122,7 @@ const AboutPage = () => {
                 }
                 {
                     status &&
-                    <ModalConfirm modal={modal} setModal={setModal} title={!status ? 'Ошибка' : messageStatus} status={messageStatus} clearPersist={undefined}>
+                    <ModalConfirm modal={modal} setModal={setModal} title={status ? 'Ошибка' : messageStatus} status={messageStatus} clearPersist={undefined}>
                         {
                             <>
                                 <div className="icon_container">
