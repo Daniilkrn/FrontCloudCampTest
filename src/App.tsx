@@ -1,6 +1,6 @@
 import React from 'react';
 import FirstPage from './components/FirstPage/FirstPage';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom'
 import Layout from './layouts/Layout';
 import CreatePage from './components/createpage/CreatePage';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <div className="form_cotaniner">
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route path='/' element={<FirstPage />} index></Route>
@@ -23,7 +23,7 @@ function App() {
               <Route path='/aboutPage' element={<AboutPage />}></Route>
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </div>
   );
