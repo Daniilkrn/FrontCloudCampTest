@@ -67,6 +67,7 @@ const AboutPage = () => {
         dispatch(setDataStages([]))
         dispatch(setStagePB(1))
         dispatch(setAllDataStage([]))
+        localStorage.clear()
     }
 
     return (
@@ -80,7 +81,10 @@ const AboutPage = () => {
                         maxLength: {
                             value: 200,
                             message: `Количестов символов не больше 200!`
-                        }
+                        },
+                        validate: (value) => {
+                            return !!value?.trim()
+                        },
                     })}
                 >
                 </textarea>

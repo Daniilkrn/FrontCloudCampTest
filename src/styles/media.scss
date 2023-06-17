@@ -5,6 +5,7 @@
     .form_cotaniner{
         width: 600px !important;
     }
+    
     .firstPage {
         font-family: 'SB Sans Interface';
         box-sizing: border-box;
@@ -332,12 +333,20 @@
     .advantagePage{
         padding: 20px 20px;
     }
+    .form_cotaniner{
+        margin: 0px 30px!important;
+        max-width: 95% !important;
+    }
 }
 
 @media screen  and (max-width: 417px){
     .aboutPage{
         padding: 40px 2%;
         
+    }
+    .form_cotaniner{
+        margin: 0px 30px!important;
+        max-width: 95% !important;
     }
     .advantagePage{
         
@@ -358,6 +367,10 @@
 }
 
 @media screen and (max-width: 475px) {
+    .form_cotaniner{
+        margin: 0px 30px!important;
+        max-width: 95% !important;
+    }
     .firstPage {
         font-family: 'SB Sans Interface';
         box-sizing: border-box;
@@ -395,7 +408,7 @@
 
         .head {
             margin-top: 40px;
-            padding: 24px 0px;
+            padding: 0px 0px 24px 0px;
             display: flex;
             flex-direction: row;
 
@@ -467,6 +480,10 @@
 }
 
 @media screen and (max-width: 560px){
+    .form_cotaniner{
+        margin: 0px 30px!important;
+        max-width: 95% !important;
+    }
     .createPage {
         padding: 40px 70px;
         display: flex;
@@ -560,7 +577,16 @@
 }
 
 @media screen and (max-width: 365px){
+    .form_cotaniner{
+        margin: 0px 30px!important;
+        max-width: 95% !important;
+        max-height: 92vh;
+    }
 
+    .aboutPage{
+        
+
+    }
     .createPage {
         padding: 40px 40px;
     }

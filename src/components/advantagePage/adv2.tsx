@@ -47,7 +47,7 @@ export default function Adv2() {
     name: "cart",
     control,
     rules: {
-      required: "Please append at least 1 item"
+      required: "Добавьте хотя бы один параметр!",
     }
   })
 
@@ -77,6 +77,9 @@ export default function Adv2() {
                   {...register(`cart.${index}.name`,
                     {
                       required: 'Это обязательное поле!',
+                      validate: (value) => {
+                        return !!value?.trim()
+                      } 
                     })}
                 />
                 <SvgSpriteTrash hanldeDeleteProp={() => remove(index)} />
@@ -87,7 +90,7 @@ export default function Adv2() {
         <div >
           <div className='addItem' onClick={() => {
             append({
-              name: 'add your advantage',
+              name: '',
             });
           }}>
             <SvgSpritePlus />
