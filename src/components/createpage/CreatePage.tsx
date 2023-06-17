@@ -66,7 +66,7 @@ const CreatePage = () => {
             {...register("nickName", {
               required: 'Это обязательное поле!',
               pattern: {
-                value: /^\w+$/gmiu,
+                value: /^[a-zA-ZА-Яа-яёЁ0-9]+$/gmiu,
                 message: 'спец. символы не допустимы!'
               },
               maxLength: {

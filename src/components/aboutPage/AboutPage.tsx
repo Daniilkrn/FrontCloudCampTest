@@ -34,6 +34,7 @@ const AboutPage = () => {
 
     const onSubmit: SubmitHandler<IShippingField> = async data => {
         dispatch(setAllDataStage([data.area]))
+        
         setModal(true)
         try {
             await axios.post("https://api.sbercloud.ru/content/v1/bootcamp/frontend", {
