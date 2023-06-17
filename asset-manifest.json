@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FrontCloudCampTest/static/css/main.9e40678a.css",
-    "main.js": "/FrontCloudCampTest/static/js/main.d8797724.js",
+    "main.css": "/FrontCloudCampTest/static/css/main.f6ae85a8.css",
+    "main.js": "/FrontCloudCampTest/static/js/main.6099c728.js",
     "static/js/787.316c0c1c.chunk.js": "/FrontCloudCampTest/static/js/787.316c0c1c.chunk.js",
     "index.html": "/FrontCloudCampTest/index.html",
-    "main.9e40678a.css.map": "/FrontCloudCampTest/static/css/main.9e40678a.css.map",
-    "main.d8797724.js.map": "/FrontCloudCampTest/static/js/main.d8797724.js.map",
+    "main.f6ae85a8.css.map": "/FrontCloudCampTest/static/css/main.f6ae85a8.css.map",
+    "main.6099c728.js.map": "/FrontCloudCampTest/static/js/main.6099c728.js.map",
     "787.316c0c1c.chunk.js.map": "/FrontCloudCampTest/static/js/787.316c0c1c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e40678a.css",
-    "static/js/main.d8797724.js"
+    "static/css/main.f6ae85a8.css",
+    "static/js/main.6099c728.js"
   ]
 }
