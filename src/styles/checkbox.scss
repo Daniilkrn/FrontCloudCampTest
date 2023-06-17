@@ -1,0 +1,19 @@
+
+    section{
+        font-family: 'SB Sans Interface';
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+    }
+    .checkboxAlabel{
+        padding: 4px 0px;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        .checkboxInput{
+            max-width: 16px;
+            background-color: aqua;
+        }
+    }

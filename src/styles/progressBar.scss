@@ -1,0 +1,67 @@
+.progressBar {
+    width: 100%;
+    .wrapper_progressBar{
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        min-height: 8px;
+        position: relative;
+        top: 14px;
+        width: 100%;
+    }
+    .fillWrapper{
+        border-radius: 8px;
+        min-height: 8px;
+        width: 0px;
+        animation: wrapper linear 0.35s both;
+        animation-delay: 1s;
+    
+    }
+    .fillWrapper2{
+        display: none;
+        border-radius: 8px;
+        min-height: 8px;
+        width: 0px;
+        animation: wrapper2 linear 0.35s forwards;
+    }
+    @keyframes wrapper {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 50%;
+        }
+    }
+    @keyframes wrapper2 {
+        0%{
+            width: 50%;
+        }
+        100%{
+            width: 100%;
+        }
+    }
+    .stages {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        span.active{
+            box-sizing: border-box;
+        }
+        span {
+            box-sizing: border-box;
+            background-color: #A6A6A6;
+            border-radius: 100px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            position: relative;
+            padding: 2px;
+            .done{
+                fill: #FFFFFF;
+                z-index: 3;
+            }
+        }
+        span::before {
+            content: '';
+        }
+    }
+}

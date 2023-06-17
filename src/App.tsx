@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FirstPage from './components/FirstPage/FirstPage';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom'
+import Layout from './layouts/Layout';
+import CreatePage from './components/createpage/CreatePage';
+import AdvantagePage from './components/advantagePage/advantagePage';
+import AboutPage from './components/aboutPage/AboutPage';
+import './styles/media.scss'
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="form_cotaniner">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route path='/' element={<FirstPage />}></Route>
+              <Route path='/createPage' element={<CreatePage />}></Route>
+              <Route path='/advantagePage' element={<AdvantagePage />}></Route>
+              <Route path='/aboutPage' element={<AboutPage />}></Route>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }

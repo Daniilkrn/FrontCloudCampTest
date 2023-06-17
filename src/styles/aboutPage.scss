@@ -1,0 +1,29 @@
+.aboutPage {
+    padding: 60px 120px;
+
+    .count {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    textarea {
+        box-sizing: border-box;
+        min-height: 84px;
+        min-width: 100%;
+        max-width: 100%;
+        max-height: 400px;
+        padding: 12px;
+    }
+
+    button {
+        background: #5558FA;
+        border-radius: 4px;
+        padding: 12px 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+}

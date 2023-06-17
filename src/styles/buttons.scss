@@ -1,0 +1,37 @@
+.buttons_container {
+    font-family: 'SB Sans Interface';
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px;
+    a:first-child{
+        border: 1.5px solid #5558FA;
+        border-radius: 4px;
+        padding: 12px 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5558FA;
+    }
+    // a:last-child {
+    //     background: #5558FA;
+    //     border-radius: 4px;
+    //     padding: 12px 16px;
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     font-size: 14px;
+    //     line-height: 20px;
+    //     color: #FFFFFF;
+    // }
+    button{
+        background: #5558FA;
+        border-radius: 4px;
+        padding: 12px 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+}

@@ -1,0 +1,92 @@
+.firstPage {
+    font-family: 'SB Sans Interface';
+    box-sizing: border-box;
+    padding: 24px;
+    width: 100%;
+    input{
+        background-color: #FFFFFF;
+    }
+        label {
+        width: 100%;
+        padding: 8px 0px;
+        margin-top: 24px;
+    }
+    input{
+        min-width: 400px;
+        max-width: 400px;
+        padding: 16px;
+        background-color: #FFFFFF;
+        background: rgba(0, 0, 0, 0.04);
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.48);
+    }
+    hr{
+        border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    .head {
+        padding: 24px 0px;
+        display: flex;
+        flex-direction: row;
+        .avatar {
+            width: 80px;
+            height: 80px;
+            background: #D5E4F7;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 52px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #212830;
+        }
+        .about_person {
+            justify-content: center;
+            padding-left: 24px;
+            display: flex;
+            flex-direction: column;
+            .name {
+                padding-bottom: 8px;
+                li {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 26px;
+                    display: flex;
+                    align-items: center;
+                    color: #333333;
+                }
+            }
+            .social{
+                display: flex;
+                flex-direction: row;
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    justify-content: flex-start;
+                    li{
+                        a{
+                            cursor: pointer;
+                            color: #5558FA;
+                        }
+                       
+                        display: flex;
+                        flex-direction: row;
+                        margin-right: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
