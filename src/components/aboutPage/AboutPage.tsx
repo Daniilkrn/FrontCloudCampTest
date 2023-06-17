@@ -33,20 +33,22 @@ const AboutPage = () => {
     })
 
     const onSubmit: SubmitHandler<IShippingField> = async data => {
-        dispatch(setAllDataStage([data.area]))
-        setModal(true)
-        try {
-            await axios.post("https://api.sbercloud.ru/content/v1/bootcamp/fronten", {
-                body: dataAll
-            })
-                .then(response => {
-                    if (response.data.status) setMessageStatus(response.data.message)
+        if(!status){
+            dispatch(setAllDataStage([data.area]))
+            setModal(true)
+            try {
+                await axios.post("https://api.sbercloud.ru/content/v1/bootcamp/frontend", {
+                    body: dataAll
                 })
-                .catch(() => {
-                    setStatus(true)
-                })
-        } catch (error) {
-
+                    .then(response => {
+                        if (response.data.status) setMessageStatus(response.data.message)
+                    })
+                    .catch(() => {
+                        setStatus(true)
+                    })
+            } catch (error) {
+    
+            }
         }
     }
 
@@ -131,7 +133,8 @@ const AboutPage = () => {
                                     </div>
                                 </div>
                                 <div className="btn_container error">
-                                    <button onClick={() => setModal(false)}>Закрыть</button>
+                                    <button onClick={() => {                                     
+                                        setModal(false)}}>Закрыть</button>
                                 </div>
                             </>
                         }
