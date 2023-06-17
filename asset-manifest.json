@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FrontCloudCampTest/static/css/main.6023b4bc.css",
+    "main.js": "/FrontCloudCampTest/static/js/main.64152d1f.js",
+    "static/js/787.316c0c1c.chunk.js": "/FrontCloudCampTest/static/js/787.316c0c1c.chunk.js",
+    "index.html": "/FrontCloudCampTest/index.html",
+    "main.6023b4bc.css.map": "/FrontCloudCampTest/static/css/main.6023b4bc.css.map",
+    "main.64152d1f.js.map": "/FrontCloudCampTest/static/js/main.64152d1f.js.map",
+    "787.316c0c1c.chunk.js.map": "/FrontCloudCampTest/static/js/787.316c0c1c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6023b4bc.css",
+    "static/js/main.64152d1f.js"
+  ]
+}
