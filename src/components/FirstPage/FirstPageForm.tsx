@@ -32,23 +32,24 @@ const FirstPageForm = () => {
 
     return (
         <form action="" onSubmit={handleSubmit(onSubmit)}>
-            <label>Номер телефона</label>
+            <label>Номер телефона
             <InputPhone type='phone' placeholder='+7 999 999-99-99'
                 {...register("phone", {
                     required: 'Это обязательное поле!',
                     minLength: {
                         value: 18,
                         message: `Введите валидный номер телефона!`
-                    }
+                    },
                 })}
             />
+            </label>
             {errors.phone &&
                 <div style={{ color: 'red' }}>
                     {errors.phone.message}
                 </div>
             }
-            <label>Email</label>
-            <input type="text" placeholder='tim.jennings@example.com'
+            <label>Email
+            <input type="email" placeholder='tim.jennings@example.com'
                 {...register('email', {
                     required: 'Это обязательное поле!',
                     pattern: {
@@ -56,6 +57,7 @@ const FirstPageForm = () => {
                         message: 'Введите валидный e-mail'
                     }
                 })} />
+            </label>
             {errors.email &&
                 <div style={{ color: 'red' }}>
                     {errors.email.message}

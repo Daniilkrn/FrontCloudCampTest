@@ -76,7 +76,7 @@ const AboutPage = () => {
         <div className='aboutPage'>
             <ProgressBar />
             <form action="" ref={refForm} onSubmit={handleSubmit(onSubmit)}>
-                <label>About</label>
+                <legend>About</legend>
                 <textarea placeholder='About me'
                     {...register("area", {
                         required: 'Это обязательное поле!',
