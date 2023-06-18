@@ -7,9 +7,10 @@ import { IOption } from '../../App.interface';
 import ReactSelect from 'react-select'
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '../../store/store';
-import { setAllDataStage, setDataCreatePage } from '../../store/reducers/dataStages';
+import { setDataCreatePage } from '../../store/reducers/dataStages';
 import { setStagePB } from '../../store/reducers/stages';
 import { NavLink, useNavigate } from 'react-router-dom';
+import useFormPersist from "react-hook-form-persist";
 
 const options: IOption[] = [
   {
@@ -34,8 +35,6 @@ const CreatePage = () => {
   const currentStagePB = useSelector((state: RootState) => state.stagesPB.currentStage);
 
   React.useEffect(() => {
-    
-    
     setValue('nickName', dataCreatePage[0])
     setValue('name', dataCreatePage[1])
     setValue('surname', dataCreatePage[2])
@@ -45,6 +44,12 @@ const CreatePage = () => {
   const { register, handleSubmit, formState: { errors, isSubmitSuccessful }, watch, control, setValue } = useForm<IShippingField>({
     mode: 'onSubmit'
   })
+
+  useFormPersist("storageKey", {
+    watch,
+    setValue,
+    storage: window.localStorage,
+  });
 
   const onSubmit: SubmitHandler<IShippingField> = data => {
     dispatch(setDataCreatePage([data.nickName, data.name, data.surname, data.sex]))

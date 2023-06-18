@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { setAllDataStage, setDataAboutPage, setDataAdvStages, setDataCreatePage, setDataStages } from '../../store/reducers/dataStages'
 import { setStagePB } from '../../store/reducers/stages'
+import useFormPersist from "react-hook-form-persist";
 
 const AboutPage = () => {
 
@@ -28,9 +29,15 @@ const AboutPage = () => {
 
     const currentStagePB = useSelector((state: RootState) => state.stagesPB.currentStage);
 
-    const { register, handleSubmit, formState: { errors, }, reset, watch, } = useForm<IShippingField>({
+    const { register, handleSubmit, formState: { errors, }, reset, watch, setValue} = useForm<IShippingField>({
         mode: "onSubmit"
     })
+
+    useFormPersist("storageKey", {
+        watch,
+        setValue,
+        storage: window.localStorage,
+    });
 
     const onSubmit: SubmitHandler<IShippingField> = async data => {
         if(!status){

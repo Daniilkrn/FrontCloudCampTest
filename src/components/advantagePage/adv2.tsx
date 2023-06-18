@@ -1,12 +1,11 @@
 import React from "react";
-import { Controller, SubmitHandler, useFieldArray, useForm } from "react-hook-form";
+import { SubmitHandler, useFieldArray, useForm } from "react-hook-form";
 import SvgSpriteTrash from "../svg/svgSpriteTrash";
 import { IData, IRadio, IShippingField } from "../../App.interface";
-import { setAllDataStage, setDataAdvStages } from "../../store/reducers/dataStages";
+import { setDataAdvStages } from "../../store/reducers/dataStages";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store";
 import useFormPersist from "react-hook-form-persist";
-
 import '../../styles/checkbox.scss'
 import SvgSpritePlus from "../svg/svgSpritePlus";
 import { setStagePB } from "../../store/reducers/stages";
