@@ -10,7 +10,7 @@ const FirstPage = () => {
         <div className='firstPage'>
             <div className="head">
                 <div className="avatar">
-                    КД
+                    
                 </div>
                 <div className="about_person">
                     <div className="name"><li>Карнаухов Даниил</li></div>
