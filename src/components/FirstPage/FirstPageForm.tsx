@@ -15,8 +15,13 @@ const FirstPageForm = () => {
     const dataFirstPage = useSelector((state: RootState) => state.stageDataSlice.firstPage)
 
     React.useEffect(() => {
-        setValue('phone', dataFirstPage[0])
-        setValue('email', dataFirstPage[1])
+        if (!dataFirstPage.length) {
+            setValue('phone', '+7 (912) 328-22-54')
+            setValue('email', 'karndaniil@gmail.com')
+        } else {
+            setValue('phone', dataFirstPage[0])
+            setValue('email', dataFirstPage[1])
+        }
     }, [])
 
     const navigate = useNavigate();
@@ -33,15 +38,15 @@ const FirstPageForm = () => {
     return (
         <form action="" onSubmit={handleSubmit(onSubmit)}>
             <label>Номер телефона
-            <InputPhone type='phone' placeholder='+7 999 999-99-99'
-                {...register("phone", {
-                    required: 'Это обязательное поле!',
-                    minLength: {
-                        value: 18,
-                        message: `Введите валидный номер телефона!`
-                    },
-                })}
-            />
+                <InputPhone type='phone'
+                    {...register("phone", {
+                        required: 'Это обязательное поле!',
+                        minLength: {
+                            value: 18,
+                            message: `Введите валидный номер телефона!`
+                        },
+                    })}
+                />
             </label>
             {errors.phone &&
                 <div style={{ color: 'red' }}>
@@ -49,14 +54,14 @@ const FirstPageForm = () => {
                 </div>
             }
             <label>Email
-            <input type="email" placeholder='tim.jennings@example.com'
-                {...register('email', {
-                    required: 'Это обязательное поле!',
-                    pattern: {
-                        value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                        message: 'Введите валидный e-mail'
-                    }
-                })} />
+                <input type="email"
+                    {...register('email', {
+                        required: 'Это обязательное поле!',
+                        pattern: {
+                            value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                            message: 'Введите валидный e-mail'
+                        }
+                    })} />
             </label>
             {errors.email &&
                 <div style={{ color: 'red' }}>
