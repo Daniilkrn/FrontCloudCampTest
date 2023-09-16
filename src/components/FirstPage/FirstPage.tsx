@@ -26,7 +26,7 @@ const FirstPage = () => {
                             </li>
                             <li>
                                 <SvgSprite />
-                                <Link to={'https://drive.google.com/file/d/13vCDoiC7S3rPF3n5gJC6TuaHbj44t_E4/view?usp=sharing'} target='_blank'>
+                                <Link to={'#'} target='_blank'>
                                     Resume
                                 </Link>
                             </li>
