@@ -16,7 +16,7 @@ const FirstPageForm = () => {
 
     React.useEffect(() => {
         if (!dataFirstPage.length) {
-            setValue('phone', '+7 (912) 328-22-54')
+            setValue('phone', '+7 (xxx) xxx-xx-xx')
             setValue('email', 'karndaniil@gmail.com')
         } else {
             setValue('phone', dataFirstPage[0])
